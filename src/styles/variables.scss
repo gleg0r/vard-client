@@ -1,5 +1,47 @@
 // colors
+$blackColor: #0E0825;
+$darkPurpleColor: #6F5F79;
+$grayColor: #878492;
+$grayColor: #CFAAE6;
+$blueColor: #57AAE4;
+$lightBlueColor: #ABD5F2;
+$lightGrayColor: #DFEFFA;
 
 //mixins
+@mixin OpenSans {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+}
+
+@mixin DuruSans {
+  font-family: "Duru Sans", sans-serif;
+  font-style: normal;
+}
+
+@mixin fontStyle($size, $weight, $height) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexColumnCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin width-height($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+
 
 //animations
