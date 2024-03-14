@@ -1,9 +1,10 @@
 import './App.css';
+import Input from './components/ui/Input/Input';
 
 function App() {
   return (
     <div className="App">
-      <h1>Test</h1>
+      <Input placeholder={'Email'} />
     </div>
   );
 }
