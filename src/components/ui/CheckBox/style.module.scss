@@ -1,20 +1,19 @@
-
 .checkbox {
-font-size: 14px;
-font-weight: 400;
+  font-size: 14px;
+  font-weight: 400;
 
-label {
-  color: #57AAE4;
-  transition: text-decoration 0.3s;   
+  label {
+    color: #57AAE4;
+    transition: text-decoration 0.3s;
 
-  &:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 2px;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 2px;
+    }
   }
-}
 
-input[type="checkbox"]:checked + label {
-  color: #57AAE4;
-}
+  input[type="checkbox"]:checked+label {
+    color: #57AAE4;
+  }
 }
