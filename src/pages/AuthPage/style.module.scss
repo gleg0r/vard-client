@@ -1,0 +1,10 @@
+@import '../../styles/variables.scss';
+
+.auth {
+  @include flexColumnCenter;
+  width: fit-content;
+
+  &__header {
+    @include flexCenter;
+  }
+}

@@ -1,0 +1,11 @@
+@import '../styles/variables.scss';
+
+.wrapper {
+  width: 100%;
+  @include flexCenter;
+
+  &__container {
+    width: 1600px;
+    @include flexColumnCenter;
+  }
+}

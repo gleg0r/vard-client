@@ -4,7 +4,10 @@ import { Outlet } from 'react-router-dom';
 export default function LayoutMain() {
   return (
     <div className={s.wrapper}>
-      <Outlet />
+      <div className={s.wrapper__container}>
+        <h1>Layout</h1>
+        <Outlet />
+      </div>
     </div>
   );
 }
