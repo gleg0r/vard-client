@@ -6,13 +6,11 @@ import CheckBox from './components/ui/CheckBox/CheckBox';
 function App() {
   return (
     <div className="App">
-      <Input placeholder={'Email'} />
       <Routes>
         <Route>
           <Route />
         </Route>
       </Routes>
-      <CheckBox />
     </div>
   );
 }
