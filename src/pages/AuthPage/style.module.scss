@@ -76,6 +76,13 @@
       background: $darkBlueColor;
       border: 1px solid $darkBlueColor;
     }
+
+    &_active {
+      @extend .auth__login;
+      background: $blueColor;
+      color: $whiteColor;
+      border: 1px solid $blueColor;
+    }
   }
 
   &__btns {
