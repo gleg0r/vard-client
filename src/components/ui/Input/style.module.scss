@@ -8,6 +8,7 @@
   @include OpenSans;
   color: $blackColor;
   caret-color: $blueColor;
+  width: 100%;
 
   &::placeholder {
     @include OpenSans;

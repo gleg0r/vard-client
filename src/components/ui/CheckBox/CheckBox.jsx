@@ -1,17 +1,22 @@
+import React, { useState } from 'react';
 import s from './style.module.scss';
 
 export default function CheckBox() {
+  const [isActive, setIsActive] = useState(false);
+
+  const handleCheckBoxClick = () => {
+    setIsActive(!isActive);
+  };
+
   return (
-    <div className={s.checkbox}>
-      <input
-        type="checkbox"
-        id="privacy-policy"
-        name="privacy-policy"
-        required
+    <div className={`${s.checkbox} ${s.checkboxContainer}`}>
+      <div
+        className={`${s.checkboxSquare} ${isActive ? s.active : ''}`}
+        onClick={handleCheckBoxClick}
       />
-      <label>
-        I agree with <span>Teams of service</span> and{' '}
-        <span>Privacy policy</span>
+      <label className={s.checkboxLabel}>
+        I agree with <span className={s.checkboxSpan}>Teams of service</span>
+        and <span className={s.checkboxSpan}>Privacy policy</span>
       </label>
     </div>
   );
