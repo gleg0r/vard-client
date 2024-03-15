@@ -9,10 +9,10 @@ export default function AuthPage() {
         <h3 className={s.auth__title}>Welcome to VARD</h3>
         <img src={logo} alt="logo" />
       </div>
-      <Input placeholder={'Name'} />
-      <Input placeholder={'Email'} />
-      <Input placeholder={'Password'} />
-      <Input placeholder={'Confirm password'} />
+      <Input placeholder={'Name'} type={'name'} />
+      <Input placeholder={'Email'} type={'email'} />
+      <Input placeholder={'Password'} type={'password'} />
+      <Input placeholder={'Confirm password'} type={'password'} />
     </div>
   );
 }
