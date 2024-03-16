@@ -1,19 +1,43 @@
-.checkbox {
-  font-size: 14px;
-  font-weight: 400;
+@import '../../../styles/variables.scss';
 
-  label {
-    color: #57AAE4;
-    transition: text-decoration 0.3s;
+.checkbox__Container {
+  display: flex;
+  min-width: 326px;
+  @include OpenSans;
+  @include fontStyle(14px, 400, 19px);
+  letter-spacing: 0%;
 
-    &:hover {
-      text-decoration: underline;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 2px;
+  &__modifier {
+    @include width-height(18px, 18px);
+    border-radius: 5px;
+    border: 1px solid $grayColor;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &.active {
+      background-color: $blueColor;
     }
   }
 
-  input[type="checkbox"]:checked+label {
-    color: #57AAE4;
+  &__block {
+    @include flexCenter;
+    user-select: none;
+    cursor: auto;
+    margin-left: 3px;
+  }
+
+  &__element {
+    color: $blueColor;
+    position: relative;
+    cursor: pointer;
+    margin-right: 3px;
+    margin-left: 3px;
+    
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: $blueColor;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 2px;
+    }
   }
 }
