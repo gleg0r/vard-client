@@ -1,13 +1,14 @@
 @import '../../../styles/variables.scss';
 
-.checkbox__Container {
+.checkbox {
   display: flex;
   min-width: 326px;
   @include OpenSans;
   @include fontStyle(14px, 400, 19px);
   letter-spacing: 0%;
+  gap: 3px;
 
-  &__modifier {
+  &__item {
     @include width-height(18px, 18px);
     border-radius: 5px;
     border: 1px solid $grayColor;
@@ -19,20 +20,19 @@
     }
   }
 
-  &__block {
+  &__text {
     @include flexCenter;
     user-select: none;
-    cursor: auto;
-    margin-left: 3px;
+    cursor: pointer;
+    gap: 3px;
   }
 
-  &__element {
+  &__accent {
     color: $blueColor;
     position: relative;
     cursor: pointer;
-    margin-right: 3px;
-    margin-left: 3px;
-    
+
+
     &:hover {
       text-decoration: underline;
       text-decoration-color: $blueColor;
