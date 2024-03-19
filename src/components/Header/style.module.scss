@@ -1,13 +1,15 @@
 @import '../../styles/variables.scss';
 
 .header {
-    @include flexRow;
+    @include flexCenter;
     justify-content: space-between;
+    flex-direction: row;
     @include width-height(1600px, 74px);
     padding: 0px 20px 0px 40px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 
     &__menu {
-        @include flexRow;
+        @include flexCenter;
         padding-right: 20px;
         justify-content: flex-start;
         flex: none;
@@ -26,16 +28,17 @@
         @include flexCenter;
     }
 
-    &__usermenu {
+    &__user {
+        @include flexCenter;
         padding: 6px 20px;
+        cursor: pointer;
         @include OpenSans;
         @include fontStyle(18px, 400, 140%);
-        cursor: pointer;
     }
 
-    &__usermenu span {
+    &__user span {
         text-align: center;
-        padding: 6px 9px;
+        padding: 6px;
         color: rgb(14, 8, 37);
         letter-spacing: 0%;
     }

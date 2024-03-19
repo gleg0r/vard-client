@@ -28,20 +28,12 @@ const Header = () => {
             <img src={searchSvg} alt="search" />
           </a>
         </div>
-        <div className={s.header__usermenu}>
-          <a href="#">
-            <img src={usingSvg} alt="using" />
-            <span>User Name</span>
-          </a>
-          <button
-            className={cn(s.header__buttonWithArrow, {
-              [s.rotated]: isRotated,
-            })}
-            onClick={handleClick}
-          >
-            <img src={arrowSvg} alt="arrow" />
-          </button>
-        </div>
+        <button className={s.header__user} onClick={handleClick}> 
+        <img src={usingSvg} alt='using' />  
+        <span>User Name</span>  
+        <img className={isRotated ? s.rotated : ''} src={arrowSvg} alt='arrow'/> 
+        </button>
+
       </div>
     </header>
   );
