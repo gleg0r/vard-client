@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import s from './style.module.scss';
 import logo from '../../assets/images/logo.svg';
 import questionSvg from './svg/question.svg';
@@ -21,21 +21,30 @@ const Header = () => {
       </div>
       <div className={cn(s.header__menu)}>
         <div className={s.header__btn}>
-          <a href='#'><img src={questionSvg} alt='question' /></a>
-          <a href='#'><img src={searchSvg} alt='search' /></a>
+          <a href="#">
+            <img src={questionSvg} alt="question" />
+          </a>
+          <a href="#">
+            <img src={searchSvg} alt="search" />
+          </a>
         </div>
         <div className={s.header__usermenu}>
-          <a href='#'>
-            <img src={usingSvg} alt='using' />
+          <a href="#">
+            <img src={usingSvg} alt="using" />
             <span>User Name</span>
           </a>
-          <button className={cn(s.header__buttonWithArrow, { [s.rotated]: isRotated })} onClick={handleClick}>
-            <img src={arrowSvg} alt='arrow' />
-            </button>
+          <button
+            className={cn(s.header__buttonWithArrow, {
+              [s.rotated]: isRotated,
+            })}
+            onClick={handleClick}
+          >
+            <img src={arrowSvg} alt="arrow" />
+          </button>
         </div>
       </div>
     </header>
   );
-}
+};
 
 export default Header;

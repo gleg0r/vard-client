@@ -1,49 +1,47 @@
 @import '../../styles/variables.scss';
-.header{
+
+.header {
     @include flexRow;
     justify-content: space-between;
-    position: absolute;
     @include width-height(1600px, 74px);
-    left: 0%;
-    right: 0%;
-    top: 0;
-    bottom: 708px;
     padding: 0px 20px 0px 40px;
 
-    &__menu{
-        padding-right: 20px; 
+    &__menu {
         @include flexRow;
+        padding-right: 20px;
         justify-content: flex-start;
         flex: none;
         order: 1;
         flex-grow: 0;
     }
-    
-    &__btn{
-    @include width-height(63px, 24px);
-    display: flex;
+
+    &__btn {
+        @include width-height(63px, 24px);
+        display: flex;
     }
-    &__btn a{
+
+    &__btn a {
         padding-right: 3px;
         padding-left: 5px;
         @include flexCenter;
     }
-    
-    &__usermenu{
+
+    &__usermenu {
         padding: 6px 20px;
         @include OpenSans;
         @include fontStyle(18px, 400, 140%);
         cursor: pointer;
     }
-    &__usermenu span{
-        text-align: center;
-    padding: 6px 9px;
-    color: rgb(14, 8, 37);
-    letter-spacing: 0%;
-    }
-    .rotated {
-    transform: rotate(180deg);
-    }
-    
-}
 
+    &__usermenu span {
+        text-align: center;
+        padding: 6px 9px;
+        color: rgb(14, 8, 37);
+        letter-spacing: 0%;
+    }
+
+    .rotated {
+        transform: rotate(180deg);
+    }
+
+}

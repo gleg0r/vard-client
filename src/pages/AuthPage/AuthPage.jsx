@@ -26,7 +26,9 @@ export default function AuthPage() {
         <div className={s.auth__form}>
           {isLoginPage ? '' : <Input placeholder={'Name'} type={'name'} />}
           <Input placeholder={'Email'} type={'email'} />
-          <Input placeholder={'Password'} type={'password'} />
+          <div className={s.auth__password}>
+            <Input placeholder={'Password'} type={'password'} />
+          </div>
           {isLoginPage ? (
             ''
           ) : (
