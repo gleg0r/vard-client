@@ -28,12 +28,15 @@ const Header = () => {
             <img src={searchSvg} alt="search" />
           </a>
         </div>
-        <button className={s.header__user} onClick={handleClick}> 
-        <img src={usingSvg} alt='using' />  
-        <span>User Name</span>  
-        <img className={isRotated ? s.rotated : ''} src={arrowSvg} alt='arrow'/> 
+        <button className={s.header__user} onClick={handleClick}>
+          <img src={usingSvg} alt="using" />
+          <span>User Name</span>
+          <img
+            className={isRotated ? s.rotated : ''}
+            src={arrowSvg}
+            alt="arrow"
+          />
         </button>
-
       </div>
     </header>
   );

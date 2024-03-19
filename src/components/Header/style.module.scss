@@ -4,7 +4,7 @@
     @include flexCenter;
     justify-content: space-between;
     flex-direction: row;
-    @include width-height(1600px, 74px);
+    @include width-height(100%, 74px);
     padding: 0px 20px 0px 40px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 
