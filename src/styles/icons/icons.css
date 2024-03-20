@@ -48,11 +48,9 @@
 }
 .icon-arrow_simple:before {
   content: '\e906';
-  color: #6f5f79;
 }
 .icon-create:before {
   content: '\e907';
-  color: #6f5f79;
 }
 .icon-dots:before {
   content: '\e908';
@@ -65,7 +63,6 @@
 }
 .icon-copy_link:before {
   content: '\e90b';
-  color: #6f5f79;
 }
 .icon-lock:before {
   content: '\e90c';
@@ -78,7 +75,6 @@
 }
 .icon-notification:before {
   content: '\e90f';
-  color: #cfaae5;
 }
 .icon-messages:before {
   content: '\e910';
@@ -91,11 +87,9 @@
 }
 .icon-arrow_filled:before {
   content: '\e913';
-  color: #6f5f79;
 }
 .icon-comments:before {
   content: '\e914';
-  color: #6f5f79;
 }
 .icon-community:before {
   content: '\e915';
@@ -111,36 +105,28 @@
 }
 .icon-Union-7:before {
   content: '\e919';
-  color: #6f5f79;
 }
 .icon-Union-6:before {
   content: '\e91a';
 }
 .icon-Union-5:before {
   content: '\e91b';
-  color: #6f5f79;
 }
 .icon-Union-4:before {
   content: '\e91c';
-  color: #6f5f79;
 }
 .icon-Union-3:before {
   content: '\e91d';
-  color: #cfaae5;
 }
 .icon-Union-2:before {
   content: '\e91e';
-  color: #6f5f79;
 }
 .icon-Union-1:before {
   content: '\e91f';
-  color: #6f5f79;
 }
 .icon-Union:before {
   content: '\e920';
-  color: #fff;
 }
 .icon-icn_m_eye:before {
   content: '\e921';
-  color: #878492;
 }
