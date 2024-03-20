@@ -1,0 +1,58 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/icons/icons.css';
+.nav{
+    @include flexCenter;
+    padding-right: 20px;
+    justify-content: flex-start;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    &__btn{
+        display: flex;
+        @include width-height(63, 24);
+        padding-top: 5px;
+    }
+    &__btn a {
+        padding: 6px;
+    }
+    &__user {
+        @include flexCenter;
+        padding: 6px 20px;
+        cursor: pointer;
+        @include OpenSans;
+        @include fontStyle(18px, 400, 140%);
+    }
+
+    &__user span {
+        text-align: center;
+        padding-right: 16px;
+        padding-left: 6px;
+        color: $blackColor;
+        letter-spacing: 0%;
+    }
+    &__user i{
+        padding-bottom: 5px;
+    }
+
+    .rotated {
+        transform: rotate(180deg);
+    }
+   
+    &__faq{
+        color: #000000;
+        font-size: 17.99px;
+    }
+    &__settings{
+        color:#000000;
+        font-size: 18px;
+    }
+    &__name{
+        font-size: 19px;
+        @include flexCenter;
+      @include width-height(32px, 32px);
+      background-color: $blueColor; 
+      border-radius: 50%; 
+      padding-top: 5px;
+    }
+}
