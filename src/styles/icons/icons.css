@@ -16,7 +16,7 @@
 [class*=' icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'vard-icons' !important;
-  speak: never;
+  speak-as: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -26,10 +26,6 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-alert:before {
-  content: '\e922';
 }
 
 .icon-new_tab:before {
@@ -52,9 +48,11 @@
 }
 .icon-arrow_simple:before {
   content: '\e906';
+  color: #6f5f79;
 }
 .icon-create:before {
   content: '\e907';
+  color: #6f5f79;
 }
 .icon-dots:before {
   content: '\e908';
@@ -67,6 +65,7 @@
 }
 .icon-copy_link:before {
   content: '\e90b';
+  color: #6f5f79;
 }
 .icon-lock:before {
   content: '\e90c';
@@ -79,6 +78,7 @@
 }
 .icon-notification:before {
   content: '\e90f';
+  color: #cfaae5;
 }
 .icon-messages:before {
   content: '\e910';
@@ -89,48 +89,64 @@
 .icon-settings:before {
   content: '\e912';
 }
+.icon-arrow_filled1:before {
+  content: '\e913';
+  color: #000000; 
+  font-size: 9.77px; 
+  line-height: 6.56px;
+}
 .icon-arrow_filled:before {
   content: '\e913';
+  color: #6f5f79;
 }
 .icon-comments:before {
   content: '\e914';
+  color: #6f5f79;
 }
 .icon-community:before {
   content: '\e915';
 }
-.icon-Union-10:before {
+.icon-charts:before {
   content: '\e916';
 }
-.icon-Union-9:before {
+.icon-files:before {
   content: '\e917';
 }
-.icon-Union-8:before {
+.icon-connections:before {
   content: '\e918';
 }
-.icon-Union-7:before {
+.icon-dashboards:before {
   content: '\e919';
+  color: #6f5f79;
 }
-.icon-Union-6:before {
+.icon-add-from:before {
   content: '\e91a';
 }
-.icon-Union-5:before {
+.icon-search:before {
   content: '\e91b';
+  color: #6f5f79;
 }
-.icon-Union-4:before {
+.icon-filter:before {
   content: '\e91c';
+  color: #6f5f79;
 }
-.icon-Union-3:before {
+.icon-close:before {
   content: '\e91d';
+  color: #cfaae5;
 }
-.icon-Union-2:before {
+.icon-view-list:before {
   content: '\e91e';
+  color: #6f5f79;
 }
-.icon-Union-1:before {
+.icon-view-tmb:before {
   content: '\e91f';
+  color: #6f5f79;
 }
-.icon-Union:before {
+.icon-user:before {
   content: '\e920';
+  color: #fff;
 }
 .icon-icn_m_eye:before {
   content: '\e921';
+  color: #878492;
 }
