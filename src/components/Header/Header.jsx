@@ -22,7 +22,9 @@ const Header = () => {
       <div className={cn(s.header__menu)}>
         <div className={s.header__btn}>
           <a href="#">
-            <img src={questionSvg} alt="question" />
+            {/* <img src={questionSvg} alt="question" />  было */}
+            {/* стало */}
+            <i className={cn('icon-faq', s.header__faq)}></i>
           </a>
           <a href="#">
             <img src={searchSvg} alt="search" />

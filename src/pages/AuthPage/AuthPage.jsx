@@ -1,5 +1,5 @@
 /* eslint-disable indent */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import cn from 'classnames';
 import s from './style.module.scss';
 import Input from '../../components/ui/Input/Input';
@@ -11,8 +11,25 @@ import github from '../../assets/images/github_auth.svg';
 
 export default function AuthPage() {
   const [isLoginPage, setIsLoginPage] = useState(false);
-
+  const [mainPasswordType, setMainPasswordType] = useState(true);
+  const [subPasswordType, setSubPasswordType] = useState(true);
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
   const changeToLogin = () => setIsLoginPage(true);
+
+  function changeVisibleOfPassword(type) {
+    if (type === 'main') setMainPasswordType((prev) => !prev);
+    if (type === 'sub') setSubPasswordType((prev) => !prev);
+  }
+
+  function emailValidate(email) {
+    setEmail(() => {
+      return String(email).match(
+        // eslint-disable-next-line max-len
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+    });
+  }
 
   return (
     <div className={s.auth}>
@@ -25,14 +42,46 @@ export default function AuthPage() {
       <div className={s.auth__main}>
         <div className={s.auth__form}>
           {isLoginPage ? '' : <Input placeholder={'Name'} type={'name'} />}
-          <Input placeholder={'Email'} type={'email'} />
+          <div className={s.auth__email}>
+            <Input
+              onChange={(e) => emailValidate(e.target.value)}
+              placeholder={'Email'}
+              type={'email'}
+            />
+            {email === null ? (
+              <label className={s.auth__validate}>
+                <i className="icon-alert"></i>
+                Incorrect email
+              </label>
+            ) : (
+              ''
+            )}
+          </div>
+
           <div className={s.auth__password}>
-            <Input placeholder={'Password'} type={'password'} />
+            <Input
+              className={s.auth__input}
+              placeholder={'Password'}
+              type={mainPasswordType ? 'password' : 'text'}
+            />
+            <i
+              onClick={() => changeVisibleOfPassword('main')}
+              className={cn('icon-icn_m_eye', s.auth__eye)}
+            ></i>
           </div>
           {isLoginPage ? (
             ''
           ) : (
-            <Input placeholder={'Confirm password'} type={'password'} />
+            <div className={s.auth__password}>
+              <Input
+                placeholder={'Confirm password'}
+                type={subPasswordType ? 'password' : 'text'}
+              />
+              <i
+                onClick={() => changeVisibleOfPassword('sub')}
+                className={cn('icon-icn_m_eye', s.auth__eye)}
+              ></i>
+            </div>
           )}
         </div>
         {isLoginPage ? '' : <CheckBox />}

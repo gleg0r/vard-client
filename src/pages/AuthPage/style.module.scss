@@ -117,4 +117,47 @@
       box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     }
   }
+
+  &__password {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__eye {
+    position: absolute;
+    font-size: 20px;
+    right: 21px;
+    z-index: 1;
+    cursor: pointer;
+    color: $grayColor;
+    transition: .3s;
+
+    &:hover {
+      color: $blackColor;
+    }
+  }
+
+  &__email {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__validate {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: -20px;
+    @include OpenSans;
+    @include fontStyle(14px, 400, 19px);
+    letter-spacing: 0%;
+    color: $redColor;
+
+    & i {
+      padding: 0px 4px 0px 0px;
+    }
+  }
 }

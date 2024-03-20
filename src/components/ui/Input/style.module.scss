@@ -9,6 +9,7 @@
   color: $blackColor;
   caret-color: $blueColor;
   width: 100%;
+  height: 50px;
 
   &::placeholder {
     @include OpenSans;
@@ -19,8 +20,7 @@
 
   &:hover {
     border: 1px solid $blueColor;
-    background-color: #DFEFFA;
-
+    background-color: $lightGrayColor;
   }
 
   &:focus {
@@ -32,10 +32,17 @@
   }
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus {
+input:-webkit-autofill {
   border: 1px solid $grayColor;
   -webkit-text-fill-color: $blackColor;
   transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-webkit-autofill:hover {
+  border: 1px solid $blueColor;
+  background: $lightGrayColor;
+}
+
+input:-webkit-autofill:focus {
+  border: 2px solid $blueColor;
 }
