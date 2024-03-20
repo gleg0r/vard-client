@@ -28,6 +28,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-alert:before {
+  content: '\e922';
+}
+
 .icon-new_tab:before {
   content: '\e900';
 }
