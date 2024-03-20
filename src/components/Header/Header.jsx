@@ -1,10 +1,7 @@
 import { useState } from 'react';
 import s from './style.module.scss';
 import logo from '../../assets/images/logo.svg';
-import questionSvg from './svg/question.svg';
-import searchSvg from './svg/search.svg';
-import usingSvg from './svg/user.svg';
-import arrowSvg from './svg/arrow.svg';
+import NavbarHeader from '../ui/navbar/NavbarHeader';
 import cn from 'classnames';
 
 const Header = () => {
@@ -19,27 +16,9 @@ const Header = () => {
       <div className={s.header__logo}>
         <img src={logo} alt="logo" />
       </div>
-      <div className={cn(s.header__menu)}>
-        <div className={s.header__btn}>
-          <a href="#">
-            {/* <img src={questionSvg} alt="question" />  было */}
-            {/* стало */}
-            <i className={cn('icon-faq', s.header__faq)}></i>
-          </a>
-          <a href="#">
-            <img src={searchSvg} alt="search" />
-          </a>
-        </div>
-        <button className={s.header__user} onClick={handleClick}>
-          <img src={usingSvg} alt="using" />
-          <span>User Name</span>
-          <img
-            className={isRotated ? s.rotated : ''}
-            src={arrowSvg}
-            alt="arrow"
-          />
-        </button>
-      </div>
+        <div>
+      <NavbarHeader isRotated={isRotated} handleClick={handleClick} />
+    </div>
     </header>
   );
 };
